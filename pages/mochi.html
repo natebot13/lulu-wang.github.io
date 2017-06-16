@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
+	<meta charset="UTF-8" />
     <title>FlappyClone</title>
-    <script type="text/javascript" src="js/phaser.min.js"></script>
+	<script type="text/javascript" src="js/phaser.min.js"></script>
     <style type="text/css">
-    body 
-	{
+        body {
             margin: 0;
         }
     </style>
@@ -59,32 +58,35 @@ function create() {
     //add obstructions and physics
     platforms = game.add.group();
     platforms.enableBody = true;
+	
+    //invisible stars
+    stars = game.add.group();
 		
 
-    h=platforms.create(0,0,'topbound');
-    y=platforms.create(0,599,'topbound');
+    h = platforms.create(0,0,'topbound');
+    y = platforms.create(0,599,'topbound');
     h.scale.setTo(100000,0.01);
     y.scale.setTo(100000,0.1);
 
-    for (var i=0;i<1000;i++){
+    for (var i = 0; i < 1000; i++){
 
         //gap height and position randomization within limits
-        var center=Math.random()*400+100;
-        var heightGap=Math.random()*50+30;
+        var center = Math.random()*400+100;
+        var heightGap = Math.random()*50+30;
+	var star = stars.create(i*400+500,center,'star');
 	    
-        ledge= platforms.create(i*400+500,0,'ground');
+        ledge = platforms.create(i*400+500,0,'ground');
         ledge.scale.setTo(1.5,(center-heightGap/2)/1000);
         ledge.body.immovable=true;
 
 
-        ledge2= platforms.create(i*400+500,center+heightGap/2,'ground');
+        ledge2 = platforms.create(i*400+500,center+heightGap/2,'ground');
         ledge2.scale.setTo(1.5,500);
         ledge2.body.immovable=true;
 
     }
 
-
-    // The player and its settings
+    // player
     player = game.add.sprite(32, game.world.height - 150, 'dude');
     game.physics.arcade.enable(player);
     
@@ -95,12 +97,12 @@ function create() {
     player.body.gravity.y = 2000;
     
     
-    //  The score
+    // score
     scoreText = game.add.text(400,100, '0', { fontSize: '60px', fill: '#fff' });
 
     game.camera.follow(player);
     scoreText.fixedToCamera=true;
-
+    
 
     // constant animation
     player.animations.add('right', [0,1,2,3], 5, true);
@@ -114,6 +116,7 @@ function update() {
 
     //  collide player with the platforms
     game.physics.arcade.overlap(player, platforms,playerDie,null,this);
+    game.physics.arcade.overlap(player, stars, increaseScore, null, this);
     
     //status quo
     player.body.velocity.x=250;
@@ -129,9 +132,15 @@ function update() {
 
 }
 
+function increaseScore(){
+	score+=1;
+	scoreText.text = score;
+}
+
+
 function playerDie (player,platforms)
 {
-    loseText = game.add.text(400, 250, 'YOU LOSE.\nPress Space to try again.', { fontSize: '50px', fill: '#fff' });
+    loseText = game.add.text(400, 150, 'YOU LOSE.\nPress Space to try again.', { fontSize: '50px', fill: '#fff' });
     loseText.fixedToCamera=true;
     player.body.velocity=0;
     player.animations.stop();
@@ -139,7 +148,7 @@ function playerDie (player,platforms)
 
     if (this.spaceKey.isDown)
     {
-    create();
+    game.state.restart();
     }
 	
 }
