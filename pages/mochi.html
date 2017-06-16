@@ -116,7 +116,6 @@ function update() {
 
     //  collide player with the platforms
     game.physics.arcade.overlap(player, platforms,playerDie,null,this);
-    game.physics.arcade.overlap(player, stars, increaseScore, null, this);
     
     //status quo
     player.body.velocity.x=250;
@@ -132,15 +131,11 @@ function update() {
 
 }
 
-function increaseScore(){
-	score+=1;
-	scoreText.text = score;
-}
 
 
 function playerDie (player,platforms)
 {
-    loseText = game.add.text(400, 100, 'YOU LOSE.\nPress Space to try again.', { fontSize: '50px', fill: '#fff' });
+    loseText = game.add.text(400, 0, 'YOU LOSE.\nPress Space to try again.', { fontSize: '50px', fill: '#fff' });
     loseText.fixedToCamera=true;
     player.body.velocity=0;
     player.animations.stop();
