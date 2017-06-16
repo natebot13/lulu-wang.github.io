@@ -21,7 +21,7 @@ function preload() {
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/obstruc.png');
     game.load.spritesheet('dude', 'assets/thing.png', 30.05, 19);
-game.load.image('topbound','assets/platform.png');
+    game.load.image('topbound','assets/platform.png');
 }
 
 var player;
@@ -135,11 +135,11 @@ this.spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
 function playerDie (player,platforms)
 {
-	loseText = game.add.text(400, 250, 'YOU LOSE.', { fontSize: '50px', fill: '#fff' });
-	loseText.fixedToCamera=true;
-player.body.velocity=0;
-player.animations.stop();
-player.frame=1;
+    loseText = game.add.text(400, 250, 'YOU LOSE.', { fontSize: '50px', fill: '#fff' });
+    loseText.fixedToCamera=true;
+    player.body.velocity=0;
+    player.animations.stop();
+    player.frame=1;
 
 if (this.spaceKey.isDown)
 {
