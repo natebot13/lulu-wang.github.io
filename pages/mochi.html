@@ -130,22 +130,17 @@ function update() {
 }
 
 
-
 function playerDie (player,platforms)
 {
-    loseText = game.add.text(300, 200, 'YOU LOSE.\nPress Space to try again.', { fontSize: '50px', fill: '#fff' });
-    loseText.fixedToCamera=true;
-    player.body.velocity=0;
-    player.animations.stop();
-    player.frame=1;
-
-    if (this.spaceKey.isDown)
-    {
-    this.game.state.restart(false,true);
-    }
+	
+    this.player.kill();    
+    game.state.start('Over');
 	
 }
-
+Game.Over = function(game) {};
+Game.Over.prototype = { create: function() { this.spacebar = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);   
+label = game.add.text(width / 2 , height / 2, 'Score: '+score+'\nGAME OVER\nPress SPACE to restart',{ font: '22px Lucida Console', fill: '#fff', align: 'center'});    
+label.anchor.setTo(0.5, 0.5);},  update: function() {score = 0; if (this.spacebar.isDown)  game.state.start('Play'); }};
 
 
 
