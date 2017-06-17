@@ -66,12 +66,12 @@ function create() {
     h.scale.setTo(100000,0.01);
     y.scale.setTo(100000,0.1);
 
-    for (var i = 0; i < 1000; i++){
+    for (var i = 0; i < 1000; i++)
+    {
 
         //gap height and position randomization within limits
         var center = Math.random()*400+100;
         var heightGap = Math.random()*50+30;
-	var star = stars.create(i*400+500,center,'star');
 	    
         ledge = platforms.create(i*400+500,0,'ground');
         ledge.scale.setTo(1.5,(center-heightGap/2)/1000);
