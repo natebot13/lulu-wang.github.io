@@ -73,12 +73,12 @@ function create() {
         var center = Math.random()*400+100;
         var heightGap = Math.random()*50+30;
 	    
-        ledge = platforms.create(i*400+500,0,'ground');
-        ledge.scale.setTo(1.5,(center-heightGap/2)/1000);
+        ledge = platforms.create(i * 400 + 500, 0, 'ground');
+        ledge.scale.setTo(1.5, (center - heightGap / 2) / 1000);
         ledge.body.immovable=true;
 
 
-        ledge2 = platforms.create(i*400+500,center+heightGap/2,'ground');
+        ledge2 = platforms.create(i * 400 + 500, center + heightGap / 2, 'ground');
         ledge2.scale.setTo(1.5,500);
         ledge2.body.immovable=true;
 
@@ -141,7 +141,7 @@ function playerDie (player,platforms)
 
     if (this.spaceKey.isDown)
     {
-    game.state.restart();
+    this.game.state.restart();
     }
 	
 }
