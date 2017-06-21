@@ -118,6 +118,10 @@ h2{
 	margin-top:-15px;
 	letter-spacing:3px;
 }
+h2.title2{
+	color:black;
+	
+}
 
 .proj{
 background-color: transparent;
@@ -162,8 +166,8 @@ div.content{
 	display:inline-block;
 	float:left;
 	z-index:2;
-	width:100%;
-	height:350px;
+	width:100vw;
+	height:100vh;
 	background-color:#FFFFFF;
 	
 }
@@ -235,55 +239,58 @@ div.imgtext{
 </head>
 
 <body>
-<div class="menu">
-<ul class="menulinks" id="myTopnav">
-<li><a href="#">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#projects">Works</a></li>
-<li><a href="#contact">Contact</a></li>
- <li class="icon">
-    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
-  </li>
-</ul>
-</div>
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "menulinks") {
-        x.className += " responsive";
-    } else {
-        x.className = "menulinks";
-    }
-}
-</script>
-<div class="top">
-<br>
-<img class="topimg" src="images/constellation.png">
-	<div class="top-content">
-	<h1 class = "title">Lulu Wang</h1>
-	<h2 class = "desc"> Student &bull; <span class="highlight">Designer</span> &bull; Programmer</h2>
-	<a class="proj" href="#projects" >Projects</a>
+	<div class="menu">
+	<ul class="menulinks" id="myTopnav">
+	<li><a href="#">Home</a></li>
+	<li><a href="#about">About</a></li>
+	<li><a href="#projects">Works</a></li>
+	<li><a href="#contact">Contact</a></li>
+	 <li class="icon">
+	    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+	  </li>
+	</ul>
 	</div>
-</div>
+	<script>
+	function myFunction() {
+	    var x = document.getElementById("myTopnav");
+	    if (x.className === "menulinks") {
+		x.className += " responsive";
+	    } else {
+		x.className = "menulinks";
+	    }
+	}
+	</script>
+	<div class="top">
+		<br>
+		<img class="topimg" src="images/constellation.png">
+			<div class="top-content">
+			<h1 class = "title">Lulu Wang</h1>
+			<h2 class = "desc"> Student &bull; <span class="highlight">Designer</span> &bull; Programmer</h2>
+			<a class="proj" href="#projects" >Projects</a>
+			</div>
+	</div>
 
 
-<div class="content" href="#projects">
-<div class="illus">
-<a href="http://aiishii.deviantart.com"><img class="illustrations" alt="illustrations" src="images/7.jpg"> </a>
-<div class="imgtext">Illustrations</div>
-</div>
+	<div class="content" href="#projects">
+		<h2 class = "title2">
+			projects
+		</h2>
+		<div class="illus">
+		<a href="http://aiishii.deviantart.com"><img class="illustrations" alt="illustrations" src="images/7.jpg"> </a>
+		<div class="imgtext">Illustrations</div>
+		</div>
 
-<div class="code">
-<a href="pages/coding.html"><img class="coding" alt="coding projects" src="images/triangle.png"> </a>
-<div class="imgtext">Coding Projects</div>
-</div>
-	
-<div class="mochi">
-<a href="pages/mochi.html"><img class="game" alt="mochi hop" src="images/triangle.png"> </a>
-<div class="imgtext">Mochi Hop</div>
-</div>
-	
-</div>
+		<div class="code">
+		<a href="pages/coding.html"><img class="coding" alt="coding projects" src="images/triangle.png"> </a>
+		<div class="imgtext">Coding Projects</div>
+		</div>
+
+		<div class="mochi">
+		<a href="pages/mochi.html"><img class="game" alt="mochi hop" src="images/triangle.png"> </a>
+		<div class="imgtext">Mochi Hop</div>
+		</div>
+
+		</div>
 
 </body>
 </html>
