@@ -1,5 +1,6 @@
 html{
   height: 100%;
+  font-size: 15px;
 }
 
 body{
@@ -87,7 +88,6 @@ img.bordered-circle{
 }
 
 div.top-content{
-  font-size: 15px;
 	}
 
 h1{
@@ -182,4 +182,10 @@ div.mochi{
 }
 .social i:hover{
 	opacity: 1;
+}
+.fa{
+  font-size: 20px;
+}
+.fa : hover{
+  opacity: 1;
 }
