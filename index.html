@@ -15,9 +15,7 @@ span.highlight{
 }
 body{
 	position:fixed;
-}
-div.menu{
-	text-align:center;
+	left:0;
 }
 ul.menulinks{
 	list-style:none;
@@ -25,14 +23,14 @@ ul.menulinks{
 	overflow:hidden;
 	padding-top:10px;
 	width:100vw;
-	background-color:transparent;
-	border-bottom:thin white solid;
 	z-index:2;
 }
+
 div.linkmanager{
 	float:right;
 	margin-right:5vw;
 }
+
 li{
 	float:left;
 	display:inline;
@@ -41,14 +39,15 @@ li a {
 	display:block;
 	text-decoration:none;
 	padding:10px 100px 15px 50px;
-	font-family: "poiret one", "open sans", sans-serif;
+	font-size: 10px;
+	font-family: "open sans condensed", sans-serif;
 	text-transform:uppercase;
 	text-align:center;
 	color:#5AE8FD;
 	margin-left:20px;
 
 }
-ul.menulinks li a:hover { letter-spacing:3px; text-decoration:underline; -webkit-transition: ease-in-out;transition-duration:1s;}
+ul.menulinks li a:hover { }
 
 ul.menulinks li.icon {display: none;}
 
@@ -90,12 +89,12 @@ img.bordered-circle{
 .top{
 	align-content:center;
 	height: 100vh;
+	width: 100vh;
 	background-color:#2b2b2b;
 }
 
 div.top-content{
 	height:70vh;
-
 	}
 
 h1{
@@ -114,7 +113,7 @@ h1{
 }
 h2{
 	text-align: center;
-	font-family: "Julius Sans One", "poiret one", sans-serif;
+	font-family: "open sans", "open sans condensed", sans-serif;
 	display: block;
 	color:white;
 	position:relative;
@@ -234,19 +233,6 @@ div.mochi{
 </head>
 
 <body>
-	<div class="menu">
-	<ul class="menulinks" id="myTopnav">
-		<div class="linkmanager">
-			<li><a href="#">Home</a></li>
-			<li><a href="#about">About</a></li>
-			<li><a href="#projects">Works</a></li>
-			<li><a href="#contact">Contact</a></li>
-			 <li class="icon">
-			    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
-			  </li>
-		</div>
-	</ul>
-	</div>
 
 	<script>
 	function myFunction() {
@@ -266,11 +252,25 @@ div.mochi{
 			<h1 class = "title">Lulu Wang</h1>
 			<h2 class = "desc"> Student &bull; <span class="highlight">Designer</span> &bull; Programmer</h2>
 			</div>
+
+			<div class = "social">
+				<li><a href="mailto:me@lulu.wang25@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
+		    <li><a href="https://github.com/lulu-wang" target="_blank"><i class="fa fa-github"></i></a></li>
+		    <li><a href="https://www.linkedin.com/in/luluwang25" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+			</div>
+
+			<ul class="menulinks" id="myTopnav">
+				<div class="linkmanager">
+					<li><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Works</a></li>
+					<li><a href="#contact">Contact</a></li>
+					 <li class="icon">
+					  </li>
+				</div>
+			</ul>
+
 	</div>
-	<div class = "social">
-		<li><a href="mailto:me@lulu.wang25@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>
-    <li><a href="https://github.com/lulu-wang" target="_blank"><i class="fa fa-github"></i></a></li>
-    <li><a href="https://www.linkedin.com/in/luluwang25" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-	</div>
+
 </body>
 </html>
