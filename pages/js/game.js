@@ -123,15 +123,7 @@ function playerDie (player,platforms)
 
     if (this.spaceKey.isDown)
     {
-    player.body = null;
-    player.destroy();
-    for (int i = 0; i < platforms.children.length; i ++){
-	    platforms.children[i].body = null;
-	    platforms.children[i].destroy();
-    }
-    loseText.destroy();
-    sky.body = null;
-    sky.destroy();
+  
     create();
     }
 	
