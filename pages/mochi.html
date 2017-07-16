@@ -26,9 +26,6 @@ function preload() {
 
 var player;
 var platforms;
-var cursors;
-var platforms2;
-var stars;
 var score = 0;
 var scoreText;
 var num=0;
@@ -37,8 +34,6 @@ var loseText;
 var sky;
 var spacekey;
 var ledge;
-var ledge2;
-var button;
 var h;
 var y;
 
@@ -59,8 +54,6 @@ function create() {
     platforms = game.add.group();
     platforms.enableBody = true;
 	
-		
-
     h = platforms.create(0,0,'topbound');
     y = platforms.create(0,599,'topbound');
     h.scale.setTo(100000,0.01);
@@ -118,6 +111,11 @@ function update() {
     //status quo
     player.body.velocity.x=250;
     player.animations.play('right');
+	
+    for ( int i = 0; i < platforms.children.length; i ++){
+        if (platforms.children[i].x < game.camera.x){
+	    platforms.children[i].destroy();
+    }
 
     this.spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 	
@@ -133,7 +131,6 @@ function update() {
 function playerDie (player,platforms)
 {
 
-	
     loseText = game.add.text(300, 200, 'YOU LOSE.\nPress Space to try again.', { fontSize: '50px', fill: '#fff' });
     loseText.fixedToCamera=true;
     player.body.velocity=0;
@@ -142,6 +139,10 @@ function playerDie (player,platforms)
 
     if (this.spaceKey.isDown)
     {
+    player.destroy();
+    platforms.destroy(true);
+    loseText.destroy();
+    sky.destroy();
     create();
     }
 	
