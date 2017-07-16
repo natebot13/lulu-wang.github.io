@@ -9,7 +9,7 @@ function preload() {
 }
 
 var player;
-var platforms;
+var platforms = game.add.group();
 var score = 0;
 var scoreText;
 var num=0;
@@ -20,6 +20,8 @@ var spacekey;
 var ledge;
 var h;
 var y;
+var center = Math.random()*400+100;
+var heightGap = Math.random()*50+30;
 
 
 function create() {
@@ -35,32 +37,9 @@ function create() {
 
 
     //add obstructions and physics
-    platforms = game.add.group();
     platforms.enableBody = true;
-	
-    h = platforms.create(0,0,'topbound');
-    y = platforms.create(0,599,'topbound');
-    h.scale.setTo(100000,0.01);
-    y.scale.setTo(100000,0.1);
 
-    for (var i = 0; i < 1000; i++)
-    {
-
-        //gap height and position randomization within limits
-        var center = Math.random()*400+100;
-        var heightGap = Math.random()*50+30;
-	    
-        ledge = platforms.create(i * 400 + 500, 0, 'ground');
-        ledge.scale.setTo(1.5, (center - heightGap / 2) / 1000);
-        ledge.body.immovable=true;
-
-
-        ledge2 = platforms.create(i * 400 + 500, center + heightGap / 2, 'ground');
-        ledge2.scale.setTo(1.5,500);
-        ledge2.body.immovable=true;
-
-    }
-
+    createLedges();
     // player
     player = game.add.sprite(32, game.world.height - 150, 'dude');
     game.physics.arcade.enable(player);
@@ -70,8 +49,6 @@ function create() {
     
     //hahahahaphysics
     player.body.gravity.y = 2000;
-    
-    
     // score
     scoreText = game.add.text(400,100, '0', { fontSize: '60px', fill: '#fff' });
 
@@ -86,6 +63,29 @@ function create() {
     cursors = game.input.keyboard.createCursorKeys();
 
 }
+function createLedges(){
+	
+    h = platforms.create(0,0,'topbound');
+    y = platforms.create(0,599,'topbound');
+    h.scale.setTo(100000,0.01);
+    y.scale.setTo(100000,0.1);
+    for (var i = 0; i < 4; i++)
+    {
+
+        //gap height and position randomization within limits
+     
+	    
+        ledge = platforms.create(i * 400 + 500, 0, 'ground');
+        ledge.scale.setTo(1.5, (center - heightGap / 2) / 1000);
+        ledge.body.immovable=true;
+
+
+        ledge2 = platforms.create(i * 400 + 500, center + heightGap / 2, 'ground');
+        ledge2.scale.setTo(1.5,500);
+        ledge2.body.immovable=true;
+
+    }
+}
 
 function update() {
 
@@ -95,11 +95,7 @@ function update() {
     //status quo
     player.body.velocity.x=250;
     player.animations.play('right');
-	
-    for ( int i = 0; i < platforms.children.length; i ++){
-        if (platforms.children[i].x < game.camera.x){
-	    platforms.children[i].destroy();
-    }
+
 
     this.spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 	
