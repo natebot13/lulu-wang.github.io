@@ -39,7 +39,26 @@ function create() {
     //add obstructions and physics
     platforms.enableBody = true;
 
-    createLedges();
+     h = platforms.create(0,0,'topbound');
+    y = platforms.create(0,599,'topbound');
+    h.scale.setTo(100000,0.01);
+    y.scale.setTo(100000,0.1);
+    for (var i = 0; i < 4; i++)
+    {
+
+        //gap height and position randomization within limits
+     
+	    
+        ledge = platforms.create(i * 400 + 500, 0, 'ground');
+        ledge.scale.setTo(1.5, (center - heightGap / 2) / 1000);
+        ledge.body.immovable=true;
+
+
+        ledge2 = platforms.create(i * 400 + 500, center + heightGap / 2, 'ground');
+        ledge2.scale.setTo(1.5,500);
+        ledge2.body.immovable=true;
+
+    }
     // player
     player = game.add.sprite(32, game.world.height - 150, 'dude');
     game.physics.arcade.enable(player);
@@ -62,29 +81,6 @@ function create() {
     // controls
     cursors = game.input.keyboard.createCursorKeys();
 
-}
-function createLedges(){
-	
-    h = platforms.create(0,0,'topbound');
-    y = platforms.create(0,599,'topbound');
-    h.scale.setTo(100000,0.01);
-    y.scale.setTo(100000,0.1);
-    for (var i = 0; i < 4; i++)
-    {
-
-        //gap height and position randomization within limits
-     
-	    
-        ledge = platforms.create(i * 400 + 500, 0, 'ground');
-        ledge.scale.setTo(1.5, (center - heightGap / 2) / 1000);
-        ledge.body.immovable=true;
-
-
-        ledge2 = platforms.create(i * 400 + 500, center + heightGap / 2, 'ground');
-        ledge2.scale.setTo(1.5,500);
-        ledge2.body.immovable=true;
-
-    }
 }
 
 function update() {
