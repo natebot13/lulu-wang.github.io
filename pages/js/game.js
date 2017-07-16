@@ -6,6 +6,7 @@ function preload() {
     game.load.image('ground', 'assets/obstruc.png');
     game.load.spritesheet('dude', 'assets/thing.png', 30.05, 19);
     game.load.image('topbound','assets/platform.png');
+    game.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');
 }
 
 var player;
@@ -107,7 +108,7 @@ function update() {
 function playerDie (player,platforms)
 {
 
-    loseText = game.add.text(300, 200, 'YOU LOSE.\nPress Space to try again.', { fontSize: '50px', fill: '#fff' });
+    loseText = game.add.text(300, 200, 'YOU LOSE.\nPress Space to try again.', { font: "VT323", fontSize: '50px', fill: '#fff' });
     loseText.fixedToCamera=true;
     player.body.velocity=0;
     player.animations.stop();
