@@ -3,9 +3,8 @@ html{
 }
 
 body{
-	position:fixed;
-	left:0;
 }
+
 span.highlight{
 	color:#FD5AE8;
 }
@@ -17,17 +16,18 @@ li{
 li a, li.link{
 	display:inline;
 	text-decoration:none;
-	padding:10px 100px 15px 50px;
 	font-family: "Open Sans Condensed", "Open Sans", sans-serif;
 	text-transform:uppercase;
-  width: 100vw;
-	text-align:center;
 	color:#5AE8FD;
-	margin-left:20px;
-
 }
+
+li.link{
+  margin-left: 50px;
+}
+
 ul.menulinks{
 	list-style:none;
+  padding-bottom:50px;
 }
 ul.menulinks li a:hover { }
 
@@ -94,10 +94,9 @@ h2{
 	display: block;
 	color:white;
 	width:100vw;
-	padding-bottom:20px;
+	padding-bottom:60px;
 	letter-spacing:4px;
 	font-size:15px;
-
 }
 
 .proj{
