@@ -20,23 +20,29 @@ li{
 li a, li.link{
 	display:inline;
 	text-decoration:none;
-	padding:10px 100px 50px 50px;
 	font-family: "Open Sans Condensed", "Open Sans", sans-serif;
 	text-transform:uppercase;
   width: 100vw;
 	text-align:center;
 	color:#5AE8FD;
 	margin-left:20px;
+  padding-bottom: 50px;
+  padding-right: 20px;
+}
 
+li a{
+  padding-left: 20px;
 }
 ul.menulinks{
 	list-style:none;
+  padding-left:0;
 }
 
 p {
   color:#808080;
   font-family: "Open Sans Condensed", "Open Sans", sans-serif;
-  font-size: 11px;
+  font-size: 13px;
+  padding-bottom:20px;
 }
 
 ul.menulinks li a:hover { }
@@ -103,7 +109,7 @@ h2{
 	display: block;
 	color:white;
 	width:100vw;
-	padding-bottom:20px;
+	padding-bottom:50px;
 	letter-spacing:4px;
 	font-size:15px;
 
@@ -129,12 +135,9 @@ div.content{
 
 }
 
-.imgtext:hover{
-	visibility:visible;
-}
-
 .social{
   font-size:15px;
+	opacity: 75%;
 }
 .social li{
 	display: inline-block;
@@ -142,13 +145,11 @@ div.content{
 }
 .social i{
 	color:white;
-	opacity: 75%;
 }
 .social i:hover{
 	opacity: 1;
 }
 .fa{
-  font-size: 20px;
 }
 .fa : hover{
   opacity: 1;
