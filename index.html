@@ -11,11 +11,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <link rel="shortcut icon" type="images/favicon.png" href="/favicon.ico"/>
-<script>
-function showText(){
-	document.getElementById("abtMe").style.display = block;
-}
-</script>
+<script src = "js/main.js"></script>
 <title>Lulu Wang</title>
 </head>
 
@@ -30,15 +26,13 @@ function showText(){
 			<h2 class = "desc"> Student &bull; <span class="highlight">Designer</span> &bull; Programmer</h2>
 			<div class="linkmanager">
 						<ul class="menulinks" id="myTopnav">
-								<li><a href="#">Home</a></li>
-								<li><a onclick = "showText()">About</a></li>
-									<p id = "abtMe" style = "display: none">I am Lulu Wang.</p>
-								<li><a>Works</a></li>
-								<li><a>Contact</a></li>
-								 <li class="icon">
-								 </li>
+								<li class = "link">Home</a></li>
+								<li class = "link">About</a></li>
+								<li><a href = "http://squarespace.com/">Works</a></li>
+								<li class = "link">Contact</li>
 						</ul>
 			</div>
+			<div class = "hide" id = "abtMe" style = "display : none;"> My name is Lulu Wang. </div>
 
 			<div class = "social">
 				<li><a href="mailto:me@lulu.wang25@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a></li>

@@ -13,16 +13,13 @@ span.highlight{
 
 ul.menulinks{
 	list-style:none;
-	position:fixed;
 	overflow:hidden;
   position:relative;
-
+  font-size:15px;
 	width:100vw;
 }
 
 div.linkmanager{
-	float:right;
-	margin-right:5vw;
 }
 
 li{
@@ -30,7 +27,7 @@ li{
 	display:inline;
 }
 li a {
-	display:block;
+	display:inline;
 	text-decoration:none;
 	padding:10px 100px 15px 50px;
 	font-family: "Open Sans Condensed", "Open Sans", sans-serif;
@@ -105,7 +102,7 @@ h1{
 }
 h2{
 	text-align: center;
-	font-family: "Poiret One", "Open Sans Condensed", sans-serif;
+	font-family: "Poiret One", "Open Sans", sans-serif;
 	display: block;
 	color:white;
 	position:relative;
@@ -168,10 +165,9 @@ div.mochi{
 
 .social{
 	padding: 4px;
+  font-size:13px;
 }
 .social li{
-	font-size: 150%;
-	line-height: 150%;
 	display: inline-block;
 	margin: 6px;
 }
