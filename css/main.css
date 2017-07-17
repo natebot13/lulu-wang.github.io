@@ -52,7 +52,7 @@ p {
   padding-bottom:20px;
 }
 
-ul.menulinks li a:hover { }
+ul.menulinks li a:hover {background-color: #ffffff;}
 
 ul.menulinks li.icon {display: none;}
 
