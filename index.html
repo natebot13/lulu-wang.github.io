@@ -11,7 +11,11 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <link rel="shortcut icon" type="images/favicon.png" href="/favicon.ico"/>
-
+<script>
+function showText(){
+	document.getElementById("abtMe").style.display = block;
+}
+</script>
 <title>Lulu Wang</title>
 </head>
 
@@ -27,9 +31,10 @@
 			<div class="linkmanager">
 						<ul class="menulinks" id="myTopnav">
 								<li><a href="#">Home</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#projects">Works</a></li>
-								<li><a href="#contact">Contact</a></li>
+								<li><a onclick = "showText()">About</a></li>
+									<p id = "abtMe" style = "display: none">I am Lulu Wang.</p>
+								<li><a>Works</a></li>
+								<li><a>Contact</a></li>
 								 <li class="icon">
 								 </li>
 						</ul>
