@@ -49,12 +49,17 @@ p {
   padding-bottom:20px;
 }
 
-a.mochi{
+ul .projects{
+  list-style: none;
+
+}
+li #proj{
   color:#808080;
   font-family: "Open Sans Condensed", "Open Sans", sans-serif;
   font-size: 13px;
+  font-style:none;
   padding-bottom:20px;
-  list-style:none;
+
 }
 
 li.link:hover{
