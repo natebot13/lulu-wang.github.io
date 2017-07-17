@@ -1,8 +1,12 @@
 html{
   height: 100%;
+  width: 100%;
 }
 
 body{
+  height: 100%;
+  width: 100%;
+  background-color:#2b2b2b;
 }
 
 span.highlight{
@@ -70,7 +74,6 @@ img.bordered-circle{
 .top{
 	align-content:center;
 	height: 100vh;
-	background-color:#2b2b2b;
 }
 
 div.top-content{
@@ -99,21 +102,6 @@ h2{
 
 }
 
-.proj{
-background-color: transparent;
-    padding: 15px 32px;
-	text-transform:uppercase;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    font-size: 17px;
-    margin: 40px 31%;
-    cursor: pointer;
-	text-decoration:none;
-	letter-spacing:4px;
-	position:relative;
-
-}
 
 div.bottom{
 	text-align:center;
@@ -133,17 +121,6 @@ div.content{
 	background-color:#FFFFFF;
 
 }
-
-div.mochi{
-
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    display:block;
-    position:absolute;
-    margin-left:90px;
-
-	}
 
 .imgtext:hover{
 	visibility:visible;
