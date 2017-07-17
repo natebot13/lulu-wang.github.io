@@ -49,6 +49,14 @@ p {
   padding-bottom:20px;
 }
 
+a.mochi{
+  color:#808080;
+  font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+  font-size: 13px;
+  padding-bottom:20px;
+  list-style:none;
+}
+
 li.link:hover{
 color: #12506e;
 }
