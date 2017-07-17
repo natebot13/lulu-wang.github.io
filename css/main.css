@@ -35,9 +35,6 @@ li a{
   padding-left: 20px;
 }
 
-h1:hover{
-  color: #ffffff;
-}
 
 ul.menulinks{
 	list-style:none;
@@ -52,7 +49,7 @@ p {
   padding-bottom:20px;
 }
 
-ul.menulinks li a:hover {background-color: #ffffff;}
+ul.menulinks li a:hover {color: black;}
 
 ul.menulinks li.icon {display: none;}
 
@@ -135,7 +132,6 @@ div.content{
 	padding-top:50px;
 	display:inline-block;
 	float:left;
-	z-index:2;
 	width:100vw;
 	height:100vh;
 	background-color:#FFFFFF;
@@ -145,6 +141,9 @@ div.content{
 .social{
   font-size:15px;
 	opacity: 75%;
+}
+.social:hover{
+  color: black;
 }
 .social li{
 	display: inline-block;
