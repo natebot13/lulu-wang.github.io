@@ -55,23 +55,18 @@ color: #12506e;
 
 ul.menulinks li a:hover {color: #12506e;}
 
-ul.menulinks li.icon {display: none;}
 
 @media screen and (max-width:680px) {
-  ul.menulinks li:not(:first-child) {display: none;}
-  ul.menulinks li.icon {
-    float: none;
+  ul.menulinks li:not(:first-child) {
     display: block;
+    padding-left: 0;
+    padding-bottom:0;
+    padding-top: 20px;
   }
 }
 
 @media screen and (max-width:680px) {
   ul.menulinks.responsive {position: relative;}
-  ul.menulinks.responsive li.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
   ul.menulinks.responsive li {
     float: none;
     display: block;
