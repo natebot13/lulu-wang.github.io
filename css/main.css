@@ -1,6 +1,5 @@
 html{
   height: 100%;
-  font-size: 15px;
 }
 
 body{
@@ -11,22 +10,11 @@ span.highlight{
 	color:#FD5AE8;
 }
 
-ul.menulinks{
-	list-style:none;
-	overflow:hidden;
-  position:relative;
-  font-size:15px;
-	width:100vw;
-}
-
-div.linkmanager{
-}
-
 li{
-	float:left;
 	display:inline;
 }
-li a{
+
+li a, li.link{
 	display:inline;
 	text-decoration:none;
 	padding:10px 100px 15px 50px;
@@ -37,6 +25,9 @@ li a{
 	color:#5AE8FD;
 	margin-left:20px;
 
+}
+ul.menulinks{
+	list-style:none;
 }
 ul.menulinks li a:hover { }
 
@@ -84,28 +75,24 @@ img.bordered-circle{
 }
 
 div.top-content{
+  text-align:center;
 	}
 
 h1{
 	font-family: "Julius Sans One", "Poiret One", sans-serif;
 	font-size: 45px;
-	position:relative;
-	text-align:center;
 	padding-bottom:20px;
 	color:white;
 	letter-spacing:5px;
 	display: block;
-	width:100vw;
 	margin-top: 25vh;
 	text-transform:uppercase;
 
 }
 h2{
-	text-align: center;
 	font-family: "Poiret One", "Open Sans", sans-serif;
 	display: block;
 	color:white;
-	position:relative;
 	width:100vw;
 	padding-bottom:20px;
 	letter-spacing:4px;
@@ -164,8 +151,7 @@ div.mochi{
 }
 
 .social{
-	padding: 4px;
-  font-size:13px;
+  font-size:15px;
 }
 .social li{
 	display: inline-block;
