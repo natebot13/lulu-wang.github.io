@@ -26,9 +26,10 @@ li a, li.link{
 	text-align:center;
 	color:#5AE8FD;
   padding-bottom: 50px;
+}
+li.link{
   padding-right: 20px;
 }
-
 li a{
   padding-left: 20px;
 }
