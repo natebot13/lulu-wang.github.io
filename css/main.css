@@ -15,9 +15,9 @@ ul.menulinks{
 	list-style:none;
 	position:fixed;
 	overflow:hidden;
-	padding-top:10px;
+  position:relative;
+
 	width:100vw;
-	z-index:2;
 }
 
 div.linkmanager{
@@ -30,13 +30,12 @@ li{
 	display:inline;
 }
 li a {
-	color:white;
 	display:block;
 	text-decoration:none;
 	padding:10px 100px 15px 50px;
-	font-size: 10px;
 	font-family: "Open Sans Condensed", "Open Sans", sans-serif;
 	text-transform:uppercase;
+  width: 100vw;
 	text-align:center;
 	color:#5AE8FD;
 	margin-left:20px;
@@ -100,13 +99,13 @@ h1{
 	letter-spacing:5px;
 	display: block;
 	width:100vw;
-	margin-top: 15vh;
+	margin-top: 25vh;
 	text-transform:uppercase;
 
 }
 h2{
 	text-align: center;
-	font-family: "Comfortaa", "Open Sans Condensed", sans-serif;
+	font-family: "Poiret One", "Open Sans Condensed", sans-serif;
 	display: block;
 	color:white;
 	position:relative;
