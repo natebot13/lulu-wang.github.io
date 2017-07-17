@@ -35,8 +35,8 @@ li a{
   padding-left: 20px;
 }
 
-a:hover{
-  color: black;
+h1:hover{
+  color: #ffffff;
 }
 
 ul.menulinks{
@@ -158,6 +158,6 @@ div.content{
 }
 .fa{
 }
-.fa :hover{
+.fa:hover{
   opacity: 1;
 }
