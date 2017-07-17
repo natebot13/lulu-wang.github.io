@@ -49,7 +49,11 @@ p {
   padding-bottom:20px;
 }
 
-ul.menulinks li a:hover {color: black;}
+li.link:hover{
+color: #12506e;
+}
+
+ul.menulinks li a:hover {color: #12506e;}
 
 ul.menulinks li.icon {display: none;}
 
@@ -140,7 +144,6 @@ div.content{
 
 .social{
   font-size:15px;
-	opacity: 75%;
 }
 .social:hover{
   color: black;
@@ -151,6 +154,7 @@ div.content{
 }
 .social i{
 	color:white;
+  opacity: .5;
 }
 .social i:hover{
 	opacity: 1;
