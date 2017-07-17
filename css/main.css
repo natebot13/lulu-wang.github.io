@@ -32,6 +32,13 @@ li a, li.link{
 ul.menulinks{
 	list-style:none;
 }
+
+p {
+  color:#808080;
+  font-family: "Open Sans Condensed", "Open Sans", sans-serif;
+  font-size: 11px;
+}
+
 ul.menulinks li a:hover { }
 
 ul.menulinks li.icon {display: none;}
