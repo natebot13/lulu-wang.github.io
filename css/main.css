@@ -10,7 +10,7 @@ body{
 }
 
 span.highlight{
-	color:#FD5AE8;
+	color:#AF87E8;
 }
 
 li{
@@ -24,7 +24,7 @@ li a, li.link{
 	text-transform:uppercase;
   width: 100vw;
 	text-align:center;
-	color:#5AE8FD;
+	color:#8BE7FF;
   padding-bottom: 50px;
 }
 .link{
