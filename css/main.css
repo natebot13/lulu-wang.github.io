@@ -31,10 +31,6 @@ li a, li.link{
   padding-right: 20px;
   padding-left: 30px;
 }
-li a{
-  padding-left: 20px;
-}
-
 
 ul.menulinks{
 	list-style:none;
@@ -45,7 +41,8 @@ ul.menulinks{
 p {
   color:#808080;
   font-family: "Open Sans Condensed", "Open Sans", sans-serif;
-  font-size: 13px;
+  text-transform: uppercase;
+  font-size: 15px;
   padding-bottom:20px;
 }
 
@@ -53,7 +50,7 @@ ul .projects{
   list-style: none;
 
 }
-li #proj{
+li.mochi{
   color:#808080;
   font-family: "Open Sans Condensed", "Open Sans", sans-serif;
   font-size: 13px;
@@ -163,6 +160,7 @@ div.content{
 .social i{
 	color: white;
   opacity: .5;
+  padding-left:20px;
 }
 .social i:hover{
 	opacity: 1;
