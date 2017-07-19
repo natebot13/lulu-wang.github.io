@@ -41,7 +41,7 @@ ul.menulinks{
 p {
   color:#808080;
   font-family: "Open Sans Condensed", "Open Sans", sans-serif;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 15px;
   padding-bottom:20px;
 }

@@ -1,11 +1,17 @@
 var game = new Phaser.Game(800,600, Phaser.AUTO, '', { preload: preload, create: create, update: update });
+WebFontConfig = {
+  active:function(){game.time.events.add(Phaser.Timer.SECOND,createText,this);},
+
+  google:{
+    families: ['Revalia']
+  }
+};
 
 function preload() {
 
     game.load.image('sky', 'assets/sky.png');
     game.load.image('ground', 'assets/obstruc.png');
     game.load.spritesheet('dude', 'assets/thing.png', 30.05, 19);
-    game.load.image('topbound','assets/platform.png');
     game.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');
 }
 var speed = 20;
@@ -25,6 +31,7 @@ var y;
 var center = Math.random()*400+100;
 var heightGap = Math.random()*50+30;
 var cursors = game.input.keyboard.createCursorKeys();
+var spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
 
 
 function create() {
@@ -46,8 +53,9 @@ function create() {
 
     this.scoreText = this.add.text(
         this.world.centerX, this.world.height/5, "",
-        {size: "32px", fill: "#fff", align:"center"}
+        {size: "32px", fill: "#fff", align:"center", }
       );
+      this.score.setText("PRESS SPACE TO BEGIN");
     //add obstructions and physics
     // platforms.enableBody = true;
     //
@@ -70,13 +78,34 @@ function create() {
     //     ledge2.body.immovable=true;
     //
     // }
+    if (this.spaceKey.isDown)
+     {
+         this.jump();
+     }
     this.reset();
 
 }
 
+function start(){
+  this.player.body.allowGravity = true;
+  this.scoreText.setText("SCORE\n" + this.score);
+  this.gameStarted = true;
+}
+
+function jump (){
+  if (!this.gameStarted){
+    this.start();
+  }
+  if (!this.gameOver){
+    this.player.body.velocity.y = -400;
+  }
+}
+
 function update() {
   if (this.gameStarted){
-
+      if (this.palyer.body.bottom >= this.world.bounds.bottom){
+        this.playerDie();
+      }
   } else {
     this.player.y = this.world.centerY + (8 * Math.cos(this.time.now/200));
   }
@@ -93,10 +122,11 @@ function update() {
   //   this.spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
    //
   //   //  allow the player to jump anytime
-  //  if (this.spaceKey.isDown)
-  //   {
-  //       player.body.velocity.y = -650;
-  //   }
+function playerDie(){
+  this.gameOver = true;
+  this.scoreText.setText("SCORE\n" + this.score + "\nPRESS SPACE TO TRY AGAIN");
+  this.background.autoscroll (0,0);
+}
 
 function reset ()
 {
