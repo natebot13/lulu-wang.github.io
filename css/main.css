@@ -106,9 +106,13 @@ div.top-content{
   text-align:center;
 	}
 
-.showcase{
+.showcase1{
   height: 100vh;
   background-color: blue;
+}
+.code1{
+  padding: 20 20 20 20;
+  background-color: white;
 }
 
 h1{
