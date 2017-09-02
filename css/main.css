@@ -204,9 +204,20 @@ div.content{
   padding-left: 20px;
   display: inline;
   color: black;
+  letter-spacing: 3px;
+}
+
+.mochilink{
+    font-family: "Open Sans", sans-serif;
+    font-style: none;
+    color: #8BE7FF;
 }
 
 .gameicon{
   position: relative;
   padding-bottom: 20px;
+}
+
+.desc1{
+  text-transform: none;
 }
