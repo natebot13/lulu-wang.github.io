@@ -108,12 +108,15 @@ div.top-content{
 
 .showcase1{
   height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #b3b3b3;
 }
 
 .code1{
   padding: 20px 20px 20px 20px;
   background-color: white;
+  z-index: 2;
 }
 
 h1{
