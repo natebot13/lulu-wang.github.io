@@ -118,6 +118,7 @@ div.top-content{
   padding: 20px 20px 20px 20px;
   background-color: white;
   height: 50vh;
+  position:relative;
 }
 
 .projtitle {
