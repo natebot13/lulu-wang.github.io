@@ -191,6 +191,8 @@ div.content{
 }
 
 .mochititle{
+  padding-left: 20px;
+  display: inline;
   color: black;
   font-size: 30px;
 }
