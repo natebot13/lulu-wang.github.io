@@ -55,7 +55,7 @@ function create() {
         this.world.centerX, this.world.height/5, "",
         {size: "32px", fill: "#fff", align:"center", }
       );
-      this.scoreText.setText("PRESS SPACE TO BEGIN");
+      this.score.setText("PRESS SPACE TO BEGIN");
     //add obstructions and physics
     // platforms.enableBody = true;
     //
