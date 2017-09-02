@@ -71,7 +71,7 @@ ul.menulinks li a:hover {color: #12506e;}
     display: block;
     padding-left: 0;
     padding-bottom:0;
-    padding-top: 10px;
+    padding-top: 20px;
   }
 }
 
@@ -106,8 +106,13 @@ div.top-content{
   text-align:center;
 	}
 
+.showcase{
+  height: 100vh;
+  background-color: blue;
+}
+
 h1{
-	font-family: "Raleway","Julius Sans One", "Poiret One", sans-serif;
+	font-family: "Julius Sans One", "Poiret One", sans-serif;
 	font-size: 45px;
 	padding-bottom:20px;
 	color:white;
