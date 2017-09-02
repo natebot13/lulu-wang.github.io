@@ -110,12 +110,17 @@ div.top-content{
   height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #b3b3b3;
+  padding-top: 25px;
+  background-color: #cccccc;
 }
 
 .code1{
   padding: 20px 20px 20px 20px;
   background-color: white;
+}
+
+.projtitle {
+  font-family: "Open Sans", sans-serif;
 }
 
 h1{
