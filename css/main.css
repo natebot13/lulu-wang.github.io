@@ -130,6 +130,8 @@ div.top-content{
 
 div.preview1{
   display:inline;
+  float:left;
+  margin-right: 50px;
 }
 
 div.title1{
@@ -202,7 +204,6 @@ div.content{
 }
 
 .mochititle{
-  padding-left: 20px;
   display: inline;
   color: black;
   letter-spacing: 3px;
