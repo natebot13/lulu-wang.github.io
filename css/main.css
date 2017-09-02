@@ -132,6 +132,7 @@ div.preview1{
   display:inline;
   float:left;
   margin-right: 50px;
+  margin-left: 20px;
 }
 
 div.title1{
@@ -216,4 +217,14 @@ div.content{
 
 .desc1{
   text-transform: none;
+}
+
+.link1{
+  text-decoration: none;
+  font-family: "Open Sans", "Poiret One", sans-serif;
+  color:#8BE7FF;
+}
+
+.link1:hover{
+  color: #64aabd;
 }
