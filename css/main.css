@@ -117,15 +117,19 @@ div.top-content{
 .code1{
   padding: 20px 20px 20px 20px;
   background-color: white;
-  height: 50vh;
+  height: 40vh;
   position:relative;
+  padding-bottom: 50px;
+
 }
 
 .projtitle {
   font-family: "Open Sans", sans-serif;
+  position: relative;
   font-size: 20px;
   color: black;
   padding-left:20px;
+  width: 70%;
 }
 
 div.preview1{
@@ -133,6 +137,7 @@ div.preview1{
   float:left;
   margin-right: 50px;
   margin-left: 20px;
+  position:relative;
 }
 
 div.title1{
@@ -212,6 +217,7 @@ div.content{
 .gameicon{
   position: relative;
   padding-bottom: 20px;
+  width: 20vw;
 }
 
 .desc1{
