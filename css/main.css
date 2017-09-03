@@ -130,6 +130,7 @@ div.top-content{
   color: black;
   padding-left:20px;
   width: 70%;
+  display: flex;
 }
 
 div.preview1{
