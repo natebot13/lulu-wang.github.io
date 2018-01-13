@@ -25,7 +25,7 @@ var images = ['stardust.jpg',
               ].map(function(i) {
                 return $('<div>').addClass('grid-item')
                   .append($('<img>')
-                    .attr('src', 'images/portfolioimages/' + i))
+                    .attr('src', '../images/portfolioimages/' + i))
               });
 
 var uiux = []
