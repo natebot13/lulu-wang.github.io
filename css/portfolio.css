@@ -1,0 +1,42 @@
+.main-content {
+  padding: 30px;
+}
+
+.grid-sizer,
+.grid-item {
+  padding: 5px;
+  width: 100%;
+}
+
+@media only screen and (min-width : 500px) {
+  .grid-sizer,
+  .grid-item {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width : 700px) {
+  .grid-sizer,
+  .grid-item {
+    width: 33.333%;
+  }
+}
+
+@media only screen and (min-width : 900px) {
+  .grid-sizer,
+  .grid-item {
+    width: 25%;
+  }
+}
+
+@media only screen and (min-width : 1200px) {
+  .grid-sizer,
+  .grid-item {
+    width: 20%;
+  }
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
